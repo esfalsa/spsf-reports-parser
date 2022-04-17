@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>SPSF Data Portal Report Parser</title>
+		<script src="main.js" defer></script>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
+		/>
+	</head>
+
+	<body>
+		<section class="container my-4">
+			<h1 class="title">SPSF Data Portal Report Parser</h1>
+			<p>In #reports in Libcord, select the content from all messages you'd like to upload. This tool will automatically remove unnecessary text such as message senders and timestamps. Then, just copy the output text and you can paste directly into Google Sheets.</p>
+			<p><strong>IMPORTANT: Please make sure you are using 'cozy' appearance, NOT 'compact' appearance, in Discord.</strong></p>
+		</section>
+		<section class="container">
+			<div class="columns">
+				<div class="column is-one-half">
+					<textarea
+						class="textarea"
+						id="report"
+						rows="20"
+						placeholder="[ONE] Fenda 1&#13;&#10;[TWO/THREE] Fenda 2&#13;&#10;[TWO] Fenda 3"
+					></textarea>
+				</div>
+				<div class="column is-one-half is-flex is-flex-direction-column">
+					<textarea
+						class="textarea is-flex-grow-1"
+						id="output"
+						disabled
+					></textarea>
+					<button class="button is-flex-grow-0 mt-4" id="copy">Copy</button>
+				</div>
+			</div>
+		</section>
+	</body>
+</html>
