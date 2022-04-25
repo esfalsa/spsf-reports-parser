@@ -4,8 +4,9 @@ let result = "";
 
 input.addEventListener("input", (e) => {
 	document.querySelector("#output").value = "";
+	result = "";
 
-	let reports = input.value.split(/(?=^.*(?:Minor|Major))(?=^.*\d+)/g);
+	let reports = input.value.split(/(?=^.*(?:Minor|Major))(?=^.*\d+)/gm);
 
 	for (let report of reports) {
 		let lines = report.split("\n");
